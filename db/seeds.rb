@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Note.delete_all
+
+100.times do
+Note.create(title: Faker::Lorem.paragraph, content: Faker::Lorem.paragraph)
+end
